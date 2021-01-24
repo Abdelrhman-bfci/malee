@@ -62,7 +62,7 @@
                                 <div class="h5 main-color bold">ترتيب الأولويات وتقديم </div>
                                 <div class="h5 main-color bold">الحاجيات على الرغبات</div>
                             </div>
-                            <div class="my-3 px-2 p">مؤشر على اعطاء الأولوية لشراء الحاجات اللأساسية , ويعكس القدرة على التفريق بين الحاجيات والرغبات وادراك مبدأ الندرة</div>
+                            <div class="my-3 px-2 p">مؤشر على اعطاء الأولوية لشراء الحاجيات اللأساسية , ويعكس القدرة على التفريق بين الحاجيات والرغبات وإدراك مبدأ الندرة</div>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                                 <div class="h5 main-color bold">ترتيب قرارات الشراء</div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="my-3 px-2 p">المؤشر يوضح مدى القدرة على ضبط النفس وتأجيل إشباع الرغبات, والقيام بشراء الحاجيات الاساسية اولا</div>
+                            <div class="my-3 px-2 p">المؤشر يوضح مدى القدرة على ضبط النفس وتأجيل إشباع الرغبات, والقيام بشراء الحاجيات الأساسية اولاَ</div>
                         </div>
                     </div>
                 </div>
@@ -190,7 +190,7 @@
                                 <div class="h5 main-color bold">الالتزام بخطة الشراء </div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="my-3 px-2 p">يعكس القدرة على اتخاذ قرارات شراء صحيحة والالتزام بخطة الشراء لتحقيق الاهداف المالية </div>
+                            <div class="my-3 px-2 p">يعكس القدرة على اتخاذ قرارات شراء صحيحة والالتزام بخطة الشراء لتحقيق الأهداف المالية </div>
                         </div>
                     </div>
                 </div>
@@ -212,14 +212,14 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center my-3">
-                            <div class="muted small">على زيادة مصادر الدخل وتخفيض المصروفات وتحقيق الارباح </div>
+                            <div class="muted small">على زيادة مصادر الدخل وتخفيض المصروفات وتحقيق أرباح </div>
                         </div>
                         <div class="text-center mt-4 ">
                             <div class="height">
                                 <div class="h5 main-color bold">الأرباح والتكاليف</div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="my-3 px-2 p">يقيس هذا المؤشر قدرة اللاعب على شراء المنتجات التى تزيد من الدخل وكذلك المنتجات التي تقلل النفقات ومن ثم تحقيق الاهداف المالية</div>
+                            <div class="my-3 px-2 p">يقيس هذا المؤشر قدرة اللاعب على شراء المنتجات التى تزيد من الدخل وكذلك المنتجات التي تقلل النفقات ومن ثم تحقيق الأهداف المالية</div>
                         </div>
                     </div>
                 </div>
@@ -257,7 +257,7 @@
                                 <div class="h5 main-color bold">متوسط نسبة الادخار</div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="my-3 px-2 p" style="margin-top: -20px !important;">متوسط نسبة الادخار من إجمالى الدخل ويعد مؤشر على اكتساب مهارة الادخار ومواجهة النفقات الطارئة والتوجه المستقبلي</div>
+                            <div class="my-3 px-2 p" style="margin-top: -20px !important;">متوسط نسبة الادخار من إجمالى الدخل ويعد مؤشرا على اكتساب مهارة الادخار ومواجهة النفقات الطارئة والتوجه المستقبلي</div>
                         </div>
                     </div>
                 </div>
@@ -267,7 +267,7 @@
 
         <div class="col-12 subHeader text-center my-md-5">
             <div class="title">
-                <h4>التبرع والاعمال الخيرية ( العطاء )</h4>
+                <h4>التبرع والأعمال الخيرية ( العطاء )</h4>
             </div>
         </div>
 
@@ -299,7 +299,7 @@
                                 <div class="h5 main-color bold">متوسط نسبة التبرع</div>
                                 <div class="h5 main-color bold">مقارنة بالرصيد</div>
                             </div>
-                            <div class="my-3 px-2 p">متوسط ما يتبرع به اللاعب في ضوء رصيدة المتاح وقت التبرع</div>
+                            <div class="my-3 px-2 p">متوسط ما يتبرع به اللاعب في ضوء رصيده المتاح وقت التبرع</div>
                         </div>
                     </div>
                 </div>
@@ -314,12 +314,12 @@
                             <div class="right d-flex justify-content-center align-items-center ">
                                 <div class="win"></div>
                                 <div class="muted small mx-2">{{$statistics->state9}}</div>
-                                <div class="muted small" style="font-size: 9px !important; width: 90px; margin-top: 22px !important;">تمكنوا من العطاء مع الاتزام بالادخار والإنفاق الرشيد</div>
+                                <div class="muted small" style="font-size: 9px !important; width: 90px; margin-top: 22px !important;">تمكنوا من العطاء مع الاتزام بالإدخار والإنفاق الرشيد</div>
                             </div>
                             <div class="left d-flex justify-content-center align-items-center">
                                 <div class="lose mx-2"></div>
                                 <div class="muted small mx-2">{{$total - $statistics->state9}}</div>
-                                <div class="muted small" style="font-size: 9px !important;  width: 90px; margin-top: 22px !important;">قامو بالعطاء مع بعض القصور فى مسارات الصرف الاخري</div>
+                                <div class="muted small" style="font-size: 9px !important;  width: 90px; margin-top: 22px !important;">قامو بالعطاء مع بعض القصور فى مسارات الصرف الاخرى</div>
                             </div>
                         </div>
 
@@ -328,7 +328,7 @@
                                 <div class="h5 main-color bold">العطاء مع الموازنة بين مسارات</div>
                                 <div class="h5 main-color bold">الصرف الأخري</div>
                             </div>
-                            <div class="my-3 px-2 p">مؤشر على اكتساب مهارات العطاء والقدرة على تخصيص جزء من الموارد للتبرع مع الالتزام بالادخار وكذلك الانفاق وفق الأولويات الصحيحة</div>
+                            <div class="my-3 px-2 p">مؤشر على اكتساب مهارة العطاء والقدرة على تخصيص جزء من الموارد للتبرع مع الإلتزام بالادخار وكذلك الإنفاق وفق الأولويات الصحيحة</div>
                         </div>
                     </div>
                 </div>
@@ -351,7 +351,7 @@
                     </div>
                     <div class="wrapper mt-5">
                         <div class="d-flex justify-content-center my-3">
-                            <div class="muted small">من اللاعبين استطاعوا القيام بالإستثمار الأمثل ( الأعلى ربحا )</div>
+                            <div class="muted small">من اللاعبين استطاعوا القيام بالإستثمار الأمثل ( الأعلى ربحاَ )</div>
                         </div>
                         <div class="text-content  px-3 d-flex justify-content-center ">
                             <div class="right  d-flex justify-content-center align-items-center">
@@ -373,7 +373,7 @@
                                 <div class="h5 main-color bold">الاستثمار والمشروعات</div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="mb-3 px-2 p">يوضح اختيار الاستثمار الأعلى ربحا ويدل على إدراك الاستثمار كمصدر من مصادر الدخل ويعكس التوجه المستقبلي</div>
+                            <div class="mb-3 px-2 p">يوضح اختيار الاستثمار الأعلى ربحاَ ويدل على إدراك الاستثمار كمصدر من مصادر الدخل ويعكس التوجه المستقبلي</div>
                         </div>
                     </div>
                 </div>

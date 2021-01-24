@@ -13,6 +13,7 @@ class KpiController extends Controller
         $player = Player::where('PK_Player', $player_id)->first();
         if ($player){
             if ($player->items){
+<<<<<<< Updated upstream
 
                 $needItemsCount = $player->items()->leftJoin('ItemType', 'ItemType.PK_ItemType','=','Item.FK_ItemType')->OrderBy('FK_CellIndex')->limit(5)->where('ItemType.IsImportant', 1)->count();
 
@@ -56,8 +57,36 @@ class KpiController extends Controller
                 (($cond1 >= 60  && $cond1 <= 80) || ($cond2 > 10 && $cond2 <= 40) ||  ($cond3 > 10 && $cond3<= 40)) ? $kpi5 = 1 :  $kpi5 = 0;
 
                 $kpi13 = $cond3;
+=======
+
+                $needItemsCount = $player->items()->leftJoin('itemtype', 'itemtype.PK_ItemType','=','item.FK_ItemType')->limit(5)->where('itemtype.IsImportant', 1)->count();
+                ($needItemsCount > 3)? $kpi1 = 1 : $kpi1 = 0;
+                ($needItemsCount > 4)? $kpi3 = 1 : $kpi3 = 0;
+
+                /////
+                $totalNeedItems = [];
+                foreach ($player->items()->leftJoin('itemtype', 'itemtype.PK_ItemType','=','item.FK_ItemType')
+                             ->where('itemtype.IsImportant', 1)->get() as $item){
+                    array_push($totalNeedItems , $item->pivot->ItemDisplayedPrice);
+                }
+
+                $totalWantItems = [];
+                foreach ($player->items()->leftJoin('itemtype', 'itemtype.PK_ItemType','=','item.FK_ItemType')
+                             ->where('itemtype.IsImportant', 0)->get() as $item){
+                    array_push($totalWantItems , $item->pivot->ItemDisplayedPrice);
+                }
+
+                $kpi4 = (array_sum($totalWantItems)/ array_sum($totalNeedItems))*100;
+
+                ////
+                $cond1 = ($player->CharityPoints / $player->Income)*100;
+                $cond2 = ($player->DsiplayedPrice / $player->Income)*100;
+                $cond3 = ($player->Money / $player->Income)*100;
+                (($cond1 >= 60  && $cond1 <= 80) || ($cond2 > 10 && $cond2 <= 40) ||  ($cond3 > 10 && $cond3<= 40)) ? $kpi5 = 1 :  $kpi5 = 0;
+>>>>>>> Stashed changes
 
                 ($player->InvestmentReturn > 0) ? $kpi9 = 1 : $kpi9 = 0;
+<<<<<<< Updated upstream
 //                ($player->items->count() > 8 && ($cond3 >= 5 && $cond3 < 20 )) ? $kpi12 = 1 : $kpi12 = 0;
 
                 $charityValue = [];
@@ -71,35 +100,55 @@ class KpiController extends Controller
                 $kpi17 = (array_sum($charityMoneyBefore) > 0) ? (array_sum($charityValue)/array_sum($charityMoneyBefore))*100 : 0;
 
                 ($player->items->count() >= 7 && ($cond2 >= 8 && $cond2 <= 15 ) && ($cond3 >= 10)) ? $kpi18 = 1 : $kpi18 = 0;
+=======
+                ($player->items->count() > 8 && ($cond3 >= 5 && $cond3 < 20 )) ? $kpi12 = 1 : $kpi12 = 0;
+                ($player->items->count() >= 7 && ($cond1 >= 8 && $cond1 < 15 )) ? $kpi18 = 1 : $kpi18 = 0;
+>>>>>>> Stashed changes
 
                 $playerKPi = PlayerKpis::where('FK_player_id', $player->PK_Player)->first();
                 if ($playerKPi){
                     $playerKPi->update(
                         ['FK_player_id' => $player->PK_Player ,
                             'kpi1' => $kpi1 ,
+<<<<<<< Updated upstream
                             'kpi2' => $kpi2 ,
+=======
+>>>>>>> Stashed changes
                             'kpi3' => $kpi3 ,
                             'kpi4' =>$kpi4 ,
                             'kpi5' =>$kpi5 ,
                             'kpi9' =>$kpi9,
+<<<<<<< Updated upstream
                             'kpi13' =>$kpi13,
                             'kpi17' =>$kpi17,
                             'kpi18' =>$kpi18,
                             'kpi21' =>$kpi21,
+=======
+                            'kpi12' =>$kpi12,
+                            'kpi18' =>$kpi18,
+>>>>>>> Stashed changes
                         ]);
                 }else{
                     $playerKPi =  PlayerKpis::create(
                         ['FK_player_id' => $player->PK_Player ,
                             'kpi1' => $kpi1 ,
+<<<<<<< Updated upstream
                             'kpi2' => $kpi2 ,
+=======
+>>>>>>> Stashed changes
                             'kpi3' => $kpi3 ,
                             'kpi4' =>$kpi4  ,
                             'kpi5' =>$kpi5 ,
                             'kpi9' =>$kpi9 ,
+<<<<<<< Updated upstream
                             'kpi13' =>$kpi13,
                             'kpi17' =>$kpi17,
                             'kpi18' =>$kpi18,
                             'kpi21' =>$kpi21,
+=======
+                            'kpi12' =>$kpi12 ,
+                            'kpi18' =>$kpi18,
+>>>>>>> Stashed changes
                         ]);
                 }
 
@@ -143,13 +192,18 @@ class KpiController extends Controller
 
     }
 
+<<<<<<< Updated upstream
 
     public function Resolve($player_id)
     {
+=======
+    public  function  Resolve($player_id){
+>>>>>>> Stashed changes
         $player = Player::where('PK_Player', $player_id)->first();
         if ($player){
             if ($player->items){
 
+<<<<<<< Updated upstream
                 $needItemsCount = $player->items()->leftJoin('ItemType', 'ItemType.PK_ItemType','=','Item.FK_ItemType')->OrderBy('FK_CellIndex')->limit(5)->where('ItemType.IsImportant', 1)->count();
 
                 ($needItemsCount >= 3)? $kpi1 = 1 : $kpi1 = 0;
@@ -192,8 +246,35 @@ class KpiController extends Controller
                 (($cond1 >= 60  && $cond1 <= 80) || ($cond2 > 10 && $cond2 <= 40) ||  ($cond3 > 10 && $cond3<= 40)) ? $kpi5 = 1 :  $kpi5 = 0;
 
                 $kpi13 = $cond3;
+=======
+                $needItemsCount = $player->items()->leftJoin('itemtype', 'itemtype.PK_ItemType','=','item.FK_ItemType')->limit(5)->where('itemtype.IsImportant', 1)->count();
+                ($needItemsCount > 3)? $kpi1 = 1 : $kpi1 = 0;
+                ($needItemsCount > 4)? $kpi3 = 1 : $kpi3 = 0;
+
+                /////
+                $totalNeedItems = [];
+                foreach ($player->items()->leftJoin('itemtype', 'itemtype.PK_ItemType','=','item.FK_ItemType')
+                             ->where('itemtype.IsImportant', 1)->get() as $item){
+                    array_push($totalNeedItems , $item->pivot->ItemDisplayedPrice);
+                }
+
+                $totalWantItems = [];
+                foreach ($player->items()->leftJoin('itemtype', 'itemtype.PK_ItemType','=','item.FK_ItemType')
+                             ->where('itemtype.IsImportant', 0)->get() as $item){
+                    array_push($totalWantItems , $item->pivot->ItemDisplayedPrice);
+                }
+
+                $kpi4 =  array_sum($totalNeedItems) > 0 ? (array_sum($totalWantItems)/ array_sum($totalNeedItems))*100 : 0;
+
+                ////
+                $cond1 = $player->Income > 0 ? ($player->CharityPoints / $player->Income)*100 : 0;
+                $cond2 = $player->Income > 0 ? ($player->DsiplayedPrice / $player->Income)*100 : 0;
+                $cond3 = $player->Income > 0 ? ($player->Money / $player->Income)*100 : 0;
+                (($cond1 >= 60  && $cond1 <= 80) || ($cond2 > 10 && $cond2 <= 40) ||  ($cond3 > 10 && $cond3<= 40)) ? $kpi5 = 1 :  $kpi5 = 0;
+>>>>>>> Stashed changes
 
                 ($player->InvestmentReturn > 0) ? $kpi9 = 1 : $kpi9 = 0;
+<<<<<<< Updated upstream
 //                ($player->items->count() > 8 && ($cond3 >= 5 && $cond3 < 20 )) ? $kpi12 = 1 : $kpi12 = 0;
 
                 $charityValue = [];
@@ -207,35 +288,55 @@ class KpiController extends Controller
                 $kpi17 = (array_sum($charityMoneyBefore) > 0) ? (array_sum($charityValue)/array_sum($charityMoneyBefore))*100 : 0;
 
                 ($player->items->count() >= 7 && ($cond2 >= 8 && $cond2 <= 15 ) && ($cond3 >= 10)) ? $kpi18 = 1 : $kpi18 = 0;
+=======
+                ($player->items->count() > 8 && ($cond3 >= 5 && $cond3 < 20 )) ? $kpi12 = 1 : $kpi12 = 0;
+                ($player->items->count() >= 7 && ($cond1 >= 8 && $cond1 < 15 )) ? $kpi18 = 1 : $kpi18 = 0;
+>>>>>>> Stashed changes
 
                 $playerKPi = PlayerKpis::where('FK_player_id', $player->PK_Player)->first();
                 if ($playerKPi){
                     $playerKPi->update(
                         ['FK_player_id' => $player->PK_Player ,
                             'kpi1' => $kpi1 ,
+<<<<<<< Updated upstream
                             'kpi2' => $kpi2 ,
+=======
+>>>>>>> Stashed changes
                             'kpi3' => $kpi3 ,
                             'kpi4' =>$kpi4 ,
                             'kpi5' =>$kpi5 ,
                             'kpi9' =>$kpi9,
+<<<<<<< Updated upstream
                             'kpi13' =>$kpi13,
                             'kpi17' =>$kpi17,
                             'kpi18' =>$kpi18,
                             'kpi21' =>$kpi21,
+=======
+                            'kpi12' =>$kpi12,
+                            'kpi18' =>$kpi18,
+>>>>>>> Stashed changes
                         ]);
                 }else{
                     $playerKPi =  PlayerKpis::create(
                         ['FK_player_id' => $player->PK_Player ,
                             'kpi1' => $kpi1 ,
+<<<<<<< Updated upstream
                             'kpi2' => $kpi2 ,
+=======
+>>>>>>> Stashed changes
                             'kpi3' => $kpi3 ,
                             'kpi4' =>$kpi4  ,
                             'kpi5' =>$kpi5 ,
                             'kpi9' =>$kpi9 ,
+<<<<<<< Updated upstream
                             'kpi13' =>$kpi13,
                             'kpi17' =>$kpi17,
                             'kpi18' =>$kpi18,
                             'kpi21' =>$kpi21,
+=======
+                            'kpi12' =>$kpi12 ,
+                            'kpi18' =>$kpi18,
+>>>>>>> Stashed changes
                         ]);
                 }
 
