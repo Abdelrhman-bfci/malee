@@ -147,4 +147,10 @@ class KpiController extends Controller
     public function getToken(Request $request){
         dd($request->token);
     }
+
+    public function resetPassword(Request $request)
+    {
+        $token = $request->token;
+        return view('reset-password', compact('token'));
+    }
 }
