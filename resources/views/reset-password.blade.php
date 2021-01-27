@@ -103,6 +103,11 @@
                             </form>
                         </div>
                     </div>
+                    <div class="sucess text-white d-none">
+                        <div class="alert alert-success text-center" role="alert">
+                            تم تغيير كلمة السر بنجاح !    
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,6 +127,8 @@
                 });
 
                 $('#submit').on('click', function() {
+                    $(this).prop("disabled", true);
+                    $(this).css("cursor","not-allowed");
                     var pass = $('#exampleInputPassword1').val();
                     var token = {{$token}}
                     $.ajax({
@@ -137,6 +144,8 @@
                     }
                     }).done(function(data) { 
                         alert('تم تغيير كلمة السر بنجاح');
+                        $(".card").addClass("d-none");
+                        $(".sucess").removeClass("d-none");
                     });
                 })
             });
