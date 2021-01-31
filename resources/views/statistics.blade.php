@@ -13,22 +13,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link type="text/css" href="//cdn.rawgit.com/Modareb/files/master/fonts/neo.css" rel="stylesheet"/>
 </head>
-<body>
+<body class=" pt-md-3">
 
-<div class="container">
-    <div class="row">
+<div class="container mt-md-5">
+    <div class="row mt-md-5">
 
         <!---------------------------------------------------------------- Header -------------------------------------------------------->
-        <div class="col-md-12  my-md-5 text-center header">
+        <div class="col-md-12 my-md-5 text-center header">
             <div class="logo-container">
-                <img src="images/main-Logo.png" class="w-100" alt="">
+                <img src="images/main-Logo-updated.png" class="w-100" alt="">
             </div>
         </div>
-        <div class="col-12 text-center my-md-3 ">
-            <h4 class="font-weight-bold">تقرير عن المهارات الخاصة بالمستخدمين فى إطار محاور وأهداف التمكين المالي لبرنامج مالي</h4>
+        <div class="col-12 text-center my-lg-5 my-md-4 ">
+            <h4 class="font-weight-bold">تقرير عن المهارات الخاصة بالمستخدمين فى إطار </h4>
+            <h4 class="font-weight-bold mt-4 s">محاور وأهداف التمكين المالي لبرنامج مالي</h4>
         </div>
 
         <!---------------------------------------------------------------- charts -------------------------------------------------------->
+        <div class="col-12 subHeader text-center my-md-5">
+            <div class="title">
+                <h4>الادخار</h4>
+            </div>
+        </div>
+
+        <div class="col-12 mt-md-3">
+            <div class="row">
+                <div class="col-md-4 mb-4"></div>
+                <div class="col-md-4 mb-4">
+                    <div class="circle text-center d-flex align-items-center justify-content-center">
+                        <h1>65%</h1>
+                    </div>
+                    <div class="wrapper mt-5">
+                        <div class="text-center mt-4 ">
+                            <div class="height" style="margin-top: -20px !important;">
+                                <div class="h5 main-color bold">متوسط نسبة الادخار</div>
+                                <div class="h5 main-color bold"></div>
+                            </div>
+                            <div class="mb-3 px-2 p" style="margin-top: -20px !important;">متوسط نسبة الادخار من إجمالى الدخل ويعد مؤشرا على اكتساب مهارة الادخار ومواجهة النفقات الطارئة والتوجه المستقبلي</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4"></div>
+            </div>
+        </div>
+
         <div class="col-12 subHeader text-center my-md-5">
             <div class="title">
                 <h4>ترتيب الأولويات ( الحاجيات والرغبات )</h4>
@@ -55,14 +83,14 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center my-3">
-                            <div class="muted small">على ترتيب الأولويات بالشكل الصحيح</div>
+                            <div class="muted small txt">على ترتيب الأولويات بالشكل الصحيح</div>
                         </div>
                         <div class="text-center mt-4 ">
                             <div class="height">
                                 <div class="h5 main-color bold">ترتيب الأولويات وتقديم </div>
                                 <div class="h5 main-color bold">الحاجيات على الرغبات</div>
                             </div>
-                            <div class="my-3 px-2 p">مؤشر على اعطاء الأولوية لشراء الحاجيات اللأساسية , ويعكس القدرة على التفريق بين الحاجيات والرغبات وإدراك مبدأ الندرة</div>
+                            <div class="px-2 p">مؤشر على اعطاء الأولوية لشراء الحاجيات اللأساسية , ويعكس القدرة على التفريق بين الحاجيات والرغبات وإدراك مبدأ الندرة</div>
                         </div>
                     </div>
                 </div>
@@ -84,14 +112,14 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center my-3">
-                            <div class="muted small">القيام بالشراء وفق الترتيب الصحيح وتأجيل إشباع الرغبات</div>
+                            <div class="muted small txt">القيام بالشراء وفق الترتيب الصحيح وتأجيل إشباع الرغبات</div>
                         </div>
                         <div class="text-center mt-4 ">
                             <div class="height">
                                 <div class="h5 main-color bold">ترتيب قرارات الشراء</div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="my-3 px-2 p">المؤشر يوضح مدى القدرة على ضبط النفس وتأجيل إشباع الرغبات, والقيام بشراء الحاجيات الأساسية اولاَ</div>
+                            <div class="px-2 p">المؤشر يوضح مدى القدرة على ضبط النفس وتأجيل إشباع الرغبات, والقيام بشراء الحاجيات الأساسية اولاَ</div>
                         </div>
                     </div>
                 </div>
@@ -113,14 +141,14 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center my-3">
-                            <div class="muted small" style="height: 23px;"></div>
+                            <div class="muted small txt" style="height: 23px;"></div>
                         </div>
                         <div class="text-center mt-4 ">
-                            <div class="height" style="margin-top: -5px !important;">
+                            <div class="height" style="margin-top: -17px !important;">
                                 <div class="h5 main-color bold">متوسط نسبة الإنفاق على</div>
-                                <div class="h5 main-color bold">الحاجيات مقارنة بالإنفاق على الرغبات</div>
+                                <div class="h5 main-color bold" style="margin-top: -3px !important">الحاجيات مقارنة بالإنفاق على الرغبات</div>
                             </div>
-                            <div class="my-3 px-2 p">زيادة النسبة تعكس الكفاءة والإنفاق الرشيد</div>
+                            <div class="px-2 p">زيادة النسبة تعكس الكفاءة والإنفاق الرشيد</div>
                         </div>
                     </div>
                 </div>
@@ -139,9 +167,9 @@
                     <div class="progress4 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
                         <h3></h3>
                     </div>
-                    <div class="wrapper mt-5">
+                    <div class="wrapper mt-md-5">
                         <div class="text-content  px-3 d-flex justify-content-center ">
-                            <div class="right d-flex justify-content-center align-items-center ">
+                            {{-- <div class="right d-flex justify-content-center align-items-center ">
                                 <div class="win"></div>
                                 <div class="muted small mx-2">{{$statistics->state4}}</div>
                                 <div class="muted  small">قادر</div>
@@ -150,18 +178,18 @@
                                 <div class="lose mx-2"></div>
                                 <div class="muted mx-2">{{($total - $statistics->state4)}}</div>
                                 <div class="muted small">غير قادر</div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="text-center my-3 ">
-                            <div class="muted small text-center">من اللاعبين قاموا بتوزيع الدخل على مسارات صرف المال</div>
+                            <div class="muted small text-center txt">من اللاعبين قاموا بتوزيع الدخل على مسارات صرف المال</div>
                             <div class="muted small text-center ">بفاعلية ( ادخار إنفاق - عطاء )</div>
                         </div>
                         <div class="text-center mt-4 ">
-                            <div class="height" style="margin-top: -15px;">
+                            <div class="height" style="margin-top: -10px; height: 35px;">
                                 <div class="h5 main-color bold">المحافظة على المال</div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="my-3 px-2 p">مؤشر على القدرة على إدارة الأموال بكفاءة، والموازنة بين الادخار والعطاء والإنفاق الرشيد</div>
+                            <div class="px-2 p">مؤشر على القدرة على إدارة الأموال بكفاءة، والموازنة بين الادخار والعطاء والإنفاق الرشيد</div>
                         </div>
                     </div>
                 </div>
@@ -183,14 +211,14 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center my-3">
-                            <div class="muted small">على الالتزام بخطة الشراء</div>
+                            <div class="muted small txt">على الالتزام بخطة الشراء</div>
                         </div>
                         <div class="text-center mt-4 ">
-                            <div class="height">
+                            <div class="height" style="height: 42px;">
                                 <div class="h5 main-color bold">الالتزام بخطة الشراء </div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="my-3 px-2 p">يعكس القدرة على اتخاذ قرارات شراء صحيحة والالتزام بخطة الشراء لتحقيق الأهداف المالية </div>
+                            <div class="px-2 p">يعكس القدرة على اتخاذ قرارات شراء صحيحة والالتزام بخطة الشراء لتحقيق الأهداف المالية </div>
                         </div>
                     </div>
                 </div>
@@ -212,21 +240,21 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center my-3">
-                            <div class="muted small">على زيادة مصادر الدخل وتخفيض المصروفات وتحقيق أرباح </div>
+                            <div class="muted small txt">على زيادة مصادر الدخل وتخفيض المصروفات وتحقيق أرباح </div>
                         </div>
                         <div class="text-center mt-4 ">
-                            <div class="height">
+                            <div class="height" style="height: 40px">
                                 <div class="h5 main-color bold">الأرباح والتكاليف</div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="my-3 px-2 p">يقيس هذا المؤشر قدرة اللاعب على شراء المنتجات التى تزيد من الدخل وكذلك المنتجات التي تقلل النفقات ومن ثم تحقيق الأهداف المالية</div>
+                            <div class="px-2 p">يقيس هذا المؤشر قدرة اللاعب على شراء المنتجات التى تزيد من الدخل وكذلك المنتجات التي تقلل النفقات ومن ثم تحقيق الأهداف المالية</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-12 subHeader text-center my-md-5">
+        {{-- <div class="col-12 subHeader text-center my-md-5">
             <div class="title">
                 <h4>الادخار</h4>
             </div>
@@ -257,13 +285,13 @@
                                 <div class="h5 main-color bold">متوسط نسبة الادخار</div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="my-3 px-2 p" style="margin-top: -20px !important;">متوسط نسبة الادخار من إجمالى الدخل ويعد مؤشرا على اكتساب مهارة الادخار ومواجهة النفقات الطارئة والتوجه المستقبلي</div>
+                            <div class="px-2 p" style="margin-top: -20px !important;">متوسط نسبة الادخار من إجمالى الدخل ويعد مؤشرا على اكتساب مهارة الادخار ومواجهة النفقات الطارئة والتوجه المستقبلي</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12"></div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="col-12 subHeader text-center my-md-5">
             <div class="title">
@@ -275,12 +303,12 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-4 mb-2" style="position: relative;">
-                    <div class="progress8 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
-                        <h3></h3>
+                    <div class="circle text-center d-flex align-items-center justify-content-center">
+                        <h1>65%</h1>
                     </div>
                     <div class="wrapper mt-5">
                         <div class="text-content px-3 d-flex justify-content-center ">
-                            <div class="right d-flex justify-content-center align-items-center">
+                            {{-- <div class="right d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
                                 <div class="muted small mx-2">{{$statistics->state8}}</div>
                                 <div class="muted small"></div>
@@ -289,17 +317,17 @@
                                 <div class="lose mx-2"></div>
                                 <div class="muted small mx-2">{{$total - $statistics->state8}}</div>
                                 <div class="muted small"></div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="d-flex justify-content-center my-3">
-                            <div class="muted small"></div>
+                            <div class="muted small txt"></div>
                         </div>
                         <div class="text-center mt-4 ">
-                            <div class="height">
-                                <div class="h5 main-color bold">متوسط نسبة التبرع</div>
+                            <div class="height" style="margin-top: 25px !important">
+                                <div class="h5 main-color bold d">متوسط نسبة التبرع</div>
                                 <div class="h5 main-color bold">مقارنة بالرصيد</div>
                             </div>
-                            <div class="my-3 px-2 p">متوسط ما يتبرع به اللاعب في ضوء رصيده المتاح وقت التبرع</div>
+                            <div class="px-2 p">متوسط ما يتبرع به اللاعب في ضوء رصيده المتاح وقت التبرع</div>
                         </div>
                     </div>
                 </div>
@@ -310,7 +338,7 @@
                         <h3></h3>
                     </div>
                     <div class="wrapper mt-5">
-                        <div class="text-content  px-3 d-flex justify-content-center ">
+                        <div class="text-content  px-3 d-flex justify-content-center " style="margin-top: -20px !important; margin-bottom: 60px !important;">
                             <div class="right d-flex justify-content-center align-items-center ">
                                 <div class="win"></div>
                                 <div class="muted small mx-2">{{$statistics->state9}}</div>
@@ -328,7 +356,7 @@
                                 <div class="h5 main-color bold">العطاء مع الموازنة بين مسارات</div>
                                 <div class="h5 main-color bold">الصرف الأخري</div>
                             </div>
-                            <div class="my-3 px-2 p">مؤشر على اكتساب مهارة العطاء والقدرة على تخصيص جزء من الموارد للتبرع مع الإلتزام بالادخار وكذلك الإنفاق وفق الأولويات الصحيحة</div>
+                            <div class="px-2 p">مؤشر على اكتساب مهارة العطاء والقدرة على تخصيص جزء من الموارد للتبرع مع الإلتزام بالادخار وكذلك الإنفاق وفق الأولويات الصحيحة</div>
                         </div>
                     </div>
                 </div>
@@ -342,42 +370,76 @@
             </div>
         </div>
 
-        <div class="col-12">
+        <div class="col-12 mb-5 pb-md-5">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12"></div>
-                <div class="col-lg-4 col-md-4 col-sm-12 mb-4" style="position: relative;">
-                    <div class="progress10 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
-                        <h3></h3>
+                <div class="col-md-1"></div>
+                <div class="col-md-4 mb-4">
+                    <div class="circle text-center d-flex align-items-center justify-content-center">
+                        <h1>65%</h1>
                     </div>
                     <div class="wrapper mt-5">
                         <div class="d-flex justify-content-center my-3">
-                            <div class="muted small">من اللاعبين استطاعوا القيام بالإستثمار الأمثل ( الأعلى ربحاَ )</div>
+                            <div class="muted small">نسبة اللاعبين الذين قاموا بالاستثمار (مشروع تجاري)</div>
                         </div>
                         <div class="text-content  px-3 d-flex justify-content-center ">
                             <div class="right  d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
-                                <div class="muted small mx-2">{{$statistics->state10}}</div>
-                                <div class="muted small" style="font-size: 9px !important; width: 90px;">بتأسيس مشروع تجاري</div>
+                                <div class="muted small mx-2">443</div>
+                                <div class="muted small" style="font-size: 9px !important; width: 90px;"> مشروع تجاري</div>
                             </div>
-                            <div class="left  d-flex justify-content-center align-items-center ">
+                            {{-- <div class="left  d-flex justify-content-center align-items-center ">
                                 <div class="lose mx-2"></div>
                                 <div class="muted small mx-2">{{$total - $statistics->state10}}</div>
                                 <div class="muted small" style="font-size: 9px !important; width: 90px;">قامو بالاستثمار الامثل</div>
+                            </div> --}}
+                        </div>
+                        <div class="d-flex justify-content-center my-3">
+                            <div class="muted small"></div>
+                        </div>
+                        <div class="text-center mt-4 ">
+                            <div class="height" style="height: 35px">
+                                <div class="h5 main-color bold">الاستثمار والمشروعات</div>
+                                <div class="h5 main-color bold"></div>
+                            </div>
+                            <div class="px-2 p">دليل على إدراك الاستثمار كمصدر من مصادر الدخل والقدرة على زيادة الدخل</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4" style="position: relative;">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="circle text-center d-flex align-items-center justify-content-center">
+                        <h1>65%</h1>
+                    </div>
+                    <div class="wrapper mt-5">
+                        <div class="d-flex justify-content-center my-3">
+                            <div class="muted small">نسبة اللاعبين الذين اختارو الاستثمار الأعلي ربحاَ</div>
+                        </div>
+                        <div class="text-content  px-3 d-flex justify-content-center ">
+                            {{-- <div class="right  d-flex justify-content-center align-items-center">
+                                <div class="win"></div>
+                                <div class="muted small mx-2">{{$statistics->state10}}</div>
+                                <div class="muted small" style="font-size: 9px !important; width: 90px;">بتأسيس مشروع تجاري</div>
+                            </div> --}}
+                            <div class="left  d-flex justify-content-center align-items-center ">
+                                <div class="lose mx-2"></div>
+                                <div class="muted small mx-2">300</div>
+                                <div class="muted small" style="font-size: 9px !important; width: 90px;"> بالاستثمار الأمثل</div>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center my-3">
                             <div class="muted small"></div>
                         </div>
                         <div class="text-center mt-4 ">
-                            <div class="height">
+                            <div class="height" style="height: 35px">
                                 <div class="h5 main-color bold">الاستثمار والمشروعات</div>
                                 <div class="h5 main-color bold"></div>
                             </div>
-                            <div class="mb-3 px-2 p">يوضح اختيار الاستثمار الأعلى ربحاَ ويدل على إدراك الاستثمار كمصدر من مصادر الدخل ويعكس التوجه المستقبلي</div>
+                            <div class="px-2 p">يعكس إتقان مهارة الاستثمار وتمييز واختيار الاستثمار الأعلى ربحاَ</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12"></div>
+                <div class="col-md-1"></div>
             </div>
         </div>
 

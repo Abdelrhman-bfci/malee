@@ -31,7 +31,7 @@ h1{
 h4{
   margin-top: 10px;
   font-size: 1.7vw;
-  color: #808080;
+  color: #808080e8;
   line-height: 0px;
 }
 
@@ -81,13 +81,13 @@ p{
 
 .logo-container
 {
-  width: 400px;
+  width: 350px;
   margin: 0 auto;
 }
 .logo-container::before {
   content: "";
   width: 30%;
-  height: 4px;
+  height: 3px;
   background: #3e7a56;
   position: absolute;
   z-index: -99;
@@ -99,7 +99,7 @@ p{
 .logo-container::after {
   content: "";
   width: 30%;
-  height: 4px;
+  height: 3px;
   background: #3e7a56;
   position: absolute;
   z-index: -99;
@@ -110,12 +110,31 @@ p{
 
 /*------------------------------------------------ Headers --------------------------------------------*/
 
+.circle {
+  width: 20.8vw;
+  height: 20.8vw;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(231, 231, 231);
+  border-radius: 50%;
+}
+
+.circle h1 {
+  color: #808080e8;
+  font-size: 6vw;
+  margin-top: 1.5vw;
+  color: #3d7955;
+  font-weight: bold;
+}
+
 .subHeader .title{
   padding-top: 20px;
   padding-bottom: 20px;
   max-width: 600px;
   margin: 0px auto ;
-  background-color: #3e7a56;
+  /* background-color: #3e7a56; */
+  background-color: rgb(63, 123, 87);
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -125,7 +144,7 @@ p{
 .subHeader .title::after {
   content: "";
   width: 34%;
-  height: 2px;
+  height: 1.2px;
   background: #ccc;
   position: absolute;
   z-index: -99;
@@ -137,7 +156,7 @@ p{
 .subHeader .title::before {
   content: "";
   width: 34%;
-  height: 2px;
+  height: 1.2px;
   background: #ccc;
   position: absolute;
   z-index: -99;
@@ -160,7 +179,7 @@ p{
 
 .circle-progress-circle {
   stroke: #cccccc;
-    stroke-width: 16;
+  stroke-width: 16;
 }
 
 .circle-progress-value {
@@ -211,32 +230,104 @@ tspan {
   .container{
     max-width: 1550px;
   }
+  .col-12 .font-weight-bold.mt-4 {
+    margin-top: 40px !important;
+  }
 }
 
 @media (min-width: 1200px) { 
 
   h4{
     margin-top: 10px;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     color: #808080;
     line-height: 0px;
+  }
+
+  .circle {
+    width: 18.5vw;
+    height: 18.5vw;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(231, 231, 231);
+    border-radius: 50%;
+  }
+  
+  .circle h1 {
+    color: #808080e8;
+    font-size: 4vw;
+    margin-top: 1.5vw;
+    color: #3d7955;
+    font-weight: bold;
+  }
+
+  .small {
+    font-size: 9px !important;
+  }
+
+  .txt {
+    margin-top: -10px;
+  }
+
+  .p{
+    margin-top: 20px !important;
+    font-size: 10px;
+    margin-top: 10px !important;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .d {
+    margin-top: 60px !important;
+  }
+
+}
+
+
+@media(max-width: 1750px){
+  .logo-container
+  {
+    width: 300px;
+    margin: 0 auto;
+  }
+ 
+}
+
+@media (max-width: 1200px) {
+  .logo-container
+  {
+    width: 230px;
+    margin: 0 auto;
   }
 
 }
 
 @media (max-width: 992px) { 
 
+  .container{
+    max-width: 850px;
+  }
+
   .h5 {
-    font-size: 1.8vw;
+    font-size: 1.7vw;
+    margin-top: -8px;
   }
 
   .small {
-    font-size: 11px !important;
+    font-size: 8px !important;
     font-weight: bold;
+    margin-top: 0px;
+  }
+
+  .txt {
+    margin-top: -10px;
+
   }
 
   .p {
-    font-size: 11px;
+    font-size: 9px;
     font-weight: bold;
   }
 
@@ -250,15 +341,13 @@ tspan {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
-  .container{
-    max-width: 1050px;
-  }
+  
   .logo-container
   {
-    width: 250px;
+    width: 270px;
     margin: 0 auto;
   }
 }
@@ -330,5 +419,30 @@ tspan {
     right: 10px;
     top: 75px;
     float: left;
+  }
+
+  .circle {
+    width: 70vw;
+    height: 70vw;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(231, 231, 231);
+    border-radius: 50%;
+  }
+  
+  .circle h1 {
+    color: #808080e8;
+    font-size: 20vw;
+    margin-top: 1.5vw;
+    color: #3d7955;
+    font-weight: bold;
+  }
+
+  .col-12.text-center.my-lg-5.my-md-4 {
+    margin-top: 20px;
+  } 
+  .s {
+    margin-top: -5px !important;
   }
 }
