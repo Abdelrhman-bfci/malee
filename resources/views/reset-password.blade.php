@@ -98,7 +98,7 @@
                                     كلمة السر غير متطابقة
                                 </div>
                                 <div class="text-center pt-4">
-                                    <button id="submit" class="btn-lg btn-primary shadow w-50">ارسال</button>
+                                    <button id="submit" class="btn-lg btn-primary shadow w-50 disabled">ارسال</button>
                                 </div>
                             </form>
                         </div>
