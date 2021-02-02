@@ -144,7 +144,7 @@ class KpiController extends Controller
     }
 
 
-    public function getToken(Request $request){
+    public function Restpassword(Request $request){
         dd($request->token);
     }
 

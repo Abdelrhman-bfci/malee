@@ -87,7 +87,7 @@
                                 <input type="hidden" value="{{ $token }}">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1"><h3>ادخل كلمة السر </h3></label>
-                                    
+
                                     <input type="password" class="form-control bg-dark" id="exampleInputPassword1" name="password" placeholder="كلمة السر" required>
                                 </div>
                                 <div class="form-group">
@@ -105,7 +105,7 @@
                     </div>
                     <div class="sucess text-white d-none">
                         <div class="alert alert-success text-center" role="alert">
-                            تم تغيير كلمة السر بنجاح !    
+                            تم تغيير كلمة السر بنجاح !
                         </div>
                     </div>
                 </div>
@@ -127,23 +127,16 @@
                 });
 
                 $('#submit').on('click', function() {
-                    $(this).prop("disabled", true);
-                    $(this).css("cursor","not-allowed");
                     var pass = $('#exampleInputPassword1').val();
-                    var token = {{$token}}
+                    var token = '{{$token}}'
                     $.ajax({
-                    type: 'POST',
-                    url: 'https://30aa7.playfabapi.com/Admin/ResetPassword',
-                    data: {
-                        "token" : token,
-                        "password" : pass
-                    },
-                    headers: {
-                        "X-SecretKey":"SGF9BPKCMFNDPC9KD1G8ETIIQQDKF97SD3C6OA1X6W3SX194GG",
-                        "Content-Type":"application/json"
-                    }
-                    }).done(function(data) { 
-                        alert('تم تغيير كلمة السر بنجاح');
+                        type: 'POST',
+                        url: `https://30aa7.playfabapi.com/Admin/ResetPassword?token=${token}&password=${pass}`,
+                        headers: {
+                            "X-SecretKey":"SGF9BPKCMFNDPC9KD1G8ETIIQQDKF97SD3C6OA1X6W3SX194GG",
+                            "Content-Type":"application/json"
+                        }
+                    }).done(function(data) {
                         $(".card").addClass("d-none");
                         $(".sucess").removeClass("d-none");
                     });
