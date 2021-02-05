@@ -90,7 +90,7 @@
                                 <div class="h5 main-color bold">ترتيب الأولويات وتقديم </div>
                                 <div class="h5 main-color bold">الحاجيات على الرغبات</div>
                             </div>
-                            <div class="px-2 p">مؤشر على اعطاء الأولوية لشراء الحاجيات اللأساسية , ويعكس القدرة على التفريق بين الحاجيات والرغبات وإدراك مبدأ الندرة</div>
+                            <div class="px-2 p">مؤشر على إعطاء الأولوية لشراء الحاجيات اللأساسية , ويعكس القدرة على التفريق بين الحاجيات والرغبات وإدراك مبدأ الندرة</div>
                         </div>
                     </div>
                 </div>
@@ -342,21 +342,21 @@
                             <div class="right d-flex justify-content-center align-items-center ">
                                 <div class="win"></div>
                                 <div class="muted small mx-2">{{$statistics->state9}}</div>
-                                <div class="muted small" style="font-size: 9px !important; width: 90px; margin-top: 22px !important;">تمكنوا من العطاء مع الاتزام بالإدخار والإنفاق الرشيد</div>
+                                <div class="muted small" style="font-size: 9px !important; width: 90px; margin-top: 22px !important;">تمكنوا من العطاء مع الاتزام بالادخار والإنفاق الرشيد</div>
                             </div>
                             <div class="left d-flex justify-content-center align-items-center">
                                 <div class="lose mx-2"></div>
                                 <div class="muted small mx-2">{{$total - $statistics->state9}}</div>
-                                <div class="muted small" style="font-size: 9px !important;  width: 90px; margin-top: 22px !important;">قامو بالعطاء مع بعض القصور فى مسارات الصرف الاخرى</div>
+                                <div class="muted small" style="font-size: 9px !important;  width: 90px; margin-top: 22px !important;">قامو بالعطاء مع بعض القصور فى مسارات الصرف الأخرى</div>
                             </div>
                         </div>
 
                         <div class="text-center mt-4" style="margin-top: 35px !important; ">
                             <div class="height">
                                 <div class="h5 main-color bold">العطاء مع الموازنة بين مسارات</div>
-                                <div class="h5 main-color bold">الصرف الأخري</div>
+                                <div class="h5 main-color bold">الصرف الأخرى</div>
                             </div>
-                            <div class="px-2 p">مؤشر على اكتساب مهارة العطاء والقدرة على تخصيص جزء من الموارد للتبرع مع الإلتزام بالادخار وكذلك الإنفاق وفق الأولويات الصحيحة</div>
+                            <div class="px-2 p">مؤشر على اكتساب مهارة العطاء والقدرة على تخصيص جزء من الموارد للتبرع مع الالتزام بالادخار وكذلك الإنفاق وفق الأولويات الصحيحة</div>
                         </div>
                     </div>
                 </div>
@@ -413,7 +413,7 @@
                     </div>
                     <div class="wrapper mt-5">
                         <div class="d-flex justify-content-center my-3">
-                            <div class="muted small">نسبة اللاعبين الذين اختارو الاستثمار الأعلي ربحاَ</div>
+                            <div class="muted small">نسبة اللاعبين الذين اختاروا الاستثمار الأعلى ربحاَ</div>
                         </div>
                         <div class="text-content  px-3 d-flex justify-content-center ">
                             {{-- <div class="right  d-flex justify-content-center align-items-center">
