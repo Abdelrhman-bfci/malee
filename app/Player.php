@@ -20,6 +20,10 @@ class Player extends Model
             ->withPivot('MoneyBefore','ItemDisplayedPrice','PriceMultiplier','FK_CellIndex');
     }
 
+    public function plans(){
+        return $this->belongsToMany(Item::class , 'Player_plan', 'FK_Player','FK_Item','PK_Player','PK_Item');
+    }
+
     public function kpis(){
         return $this->belongsTo(PlayerKpis::class , 'FK_player_id','PK_Player');
     }
