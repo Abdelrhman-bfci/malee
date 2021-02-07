@@ -41,7 +41,7 @@
                 <div class="col-md-4 mb-4"></div>
                 <div class="col-md-4 mb-4">
                     <div class="circle text-center d-flex align-items-center justify-content-center">
-                        <h1>{{$state1}}</h1>
+                        <h1>{{$statistics->state1}}</h1>
                     </div>
                     <div class="wrapper mt-5">
                         <div class="text-center mt-4 ">
@@ -66,19 +66,19 @@
         <div class="col-12 mt-md-3">
             <div class="row">
                 <div class="col-md-4 mb-4" style="position: relative;">
-                    <div class="progress1 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
+                    <div class="progress2 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
                         <h3></h3>
                     </div>
                     <div class="wrapper mt-5">
                         <div class="text-content  px-3 d-flex justify-content-center ">
                             <div class="right mx-4 d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
-                                <div class="muted small mx-2">{{$statistics->state2}}</div>
+                                <div class="muted small mx-2">{{$statistics->state1}}</div>
                                 <div class="muted small">قادر</div>
                             </div>
                             <div class="left d-flex justify-content-center align-items-center">
                                 <div class="lose mx-2"></div>
-                                <div class="muted small mx-2">{{($total - $statistics->state2) }}</div>
+                                <div class="muted small mx-2">{{($total - $statistics->state1) }}</div>
                                 <div class="muted small">غير قادر</div>
                             </div>
                         </div>
@@ -95,19 +95,19 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" style="position: relative;">
-                    <div class="progress2 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
+                    <div class="progress3 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
                         <h3></h3>
                     </div>
                     <div class="wrapper mt-5">
                         <div class="text-content px-3 d-flex justify-content-center ">
                             <div class="right d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
-                                <div class="muted small mx-2">{{$statistics->state3}}</div>
+                                <div class="muted small mx-2">{{$statistics->state2}}</div>
                                 <div class="muted small">قادر</div>
                             </div>
                             <div class="left mr-4 d-flex justify-content-center align-items-center">
                                 <div class="lose mx-2"></div>
-                                <div class="muted small mx-2">{{($total - $statistics->state3)}}</div>
+                                <div class="muted small mx-2">{{($total - $statistics->state2)}}</div>
                                 <div class="muted small">غير قادر</div>
                             </div>
                         </div>
@@ -123,11 +123,9 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="col-md-4 mb-4" style="position: relative;">
-                    <div class="progress3 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
-                        <h3></h3>
+                    <div class="circle text-center d-flex align-items-center justify-content-center">
+                        <h1>{{$statistics->state4}}</h1>
                     </div>
                     <div class="wrapper mt-5">
                         <div class="text-content  px-3 d-flex justify-content-center ">
@@ -165,8 +163,10 @@
 
         <div class="col-12 mt-4">
             <div class="row">
+                <div class="col-md-1"></div>
+
                 <div class="col-md-4 mb-4" style="position: relative;">
-                    <div class="progress4 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
+                    <div class="progress5 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
                         <h3></h3>
                     </div>
                     <div class="wrapper mt-md-5">
@@ -195,35 +195,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" style="position: relative;">
-                    <div class="progress5 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
-                        <h3></h3>
-                    </div>
-                    <div class="wrapper mt-5">
-                        <div class="text-content  px-3 d-flex justify-content-center ">
-                            <div class="right d-flex justify-content-center align-items-center ">
-                                <div class="win"></div>
-                                <div class="muted small mx-2">{{$statistics->state5}}</div>
-                                <div class="muted small">قادر</div>
-                            </div>
-                            <div class="left mr-4 d-flex justify-content-center align-items-center ">
-                                <div class="lose mx-2"></div>
-                                <div class="muted small mx-2">{{($total - $statistics->state5)}}</div>
-                                <div class="muted small">غير قادر</div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center my-3">
-                            <div class="muted small txt">على الالتزام بخطة الشراء</div>
-                        </div>
-                        <div class="text-center mt-4 ">
-                            <div class="height" style="height: 42px;">
-                                <div class="h5 main-color bold">الالتزام بخطة الشراء </div>
-                                <div class="h5 main-color bold"></div>
-                            </div>
-                            <div class="px-2 p">يعكس القدرة على اتخاذ قرارات شراء صحيحة والالتزام بخطة الشراء لتحقيق الأهداف المالية </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-md-2"></div>
+               
                 <div class="col-md-4 mb-4" style="position: relative;">
                     <div class="progress6 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
                         <h3></h3>
@@ -253,6 +226,8 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-1"></div>
+
             </div>
         </div>
 
@@ -306,9 +281,9 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-4 mb-2" style="position: relative;">
                     <div class="circle text-center d-flex align-items-center justify-content-center">
-                        <h1>65%</h1>
+                        <h1>{{$statistics->state7}}</h1>
                     </div>
-                    <div class="wrapper mt-5">
+                    <div class="wrapper special">
                         <div class="text-content px-3 d-flex justify-content-center ">
                             {{-- <div class="right d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
@@ -324,8 +299,8 @@
                         <div class="d-flex justify-content-center my-3">
                             <div class="muted small txt"></div>
                         </div>
-                        <div class="text-center mt-4 ">
-                            <div class="height" style="margin-top: 25px !important">
+                        <div class="text-center mt-4">
+                            <div class="height" style="margin-top: 0px !important">
                                 <div class="h5 main-color bold d">متوسط نسبة التبرع</div>
                                 <div class="h5 main-color bold">مقارنة بالرصيد</div>
                             </div>
@@ -336,7 +311,7 @@
                 <div class="col-md-2 mb-4" style="position: relative;">
                 </div>
                 <div class="col-md-4 mb-4" style="position: relative;">
-                    <div class="progress9 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
+                    <div class="progress8 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
                         <h3></h3>
                     </div>
                     <div class="wrapper mt-5">
@@ -376,8 +351,8 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-4 mb-4">
-                    <div class="circle text-center d-flex align-items-center justify-content-center">
-                        <h1>65%</h1>
+                    <div class="progress9 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
+                        <h3></h3>
                     </div>
                     <div class="wrapper mt-5">
                         <div class="d-flex justify-content-center my-3">
@@ -410,8 +385,8 @@
                 <div class="col-md-2 mb-4" style="position: relative;">
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="circle text-center d-flex align-items-center justify-content-center">
-                        <h1>65%</h1>
+                    <div class="progress10 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
+                        <h3></h3>
                     </div>
                     <div class="wrapper mt-5">
                         <div class="d-flex justify-content-center my-3">
@@ -457,7 +432,7 @@
 <script>
     jQuery(function($) {
 
-        $var1 = {{($statistics->state2/$total)*100}};
+        $var1 = {{($statistics->state1/$total)*100}};
         $var1 = Math.round($var1);
         $('.progress1').circleProgress({
             max: 100,

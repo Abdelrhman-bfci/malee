@@ -245,8 +245,8 @@ tspan {
   }
 
   .circle {
-    width: 18.5vw;
-    height: 18.5vw;
+    width: 20vw;
+    height: 20vw;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -300,6 +300,10 @@ tspan {
   {
     width: 230px;
     margin: 0 auto;
+  }
+
+  .special {
+    margin-top: 50px !important;
   }
 
 }
@@ -444,5 +448,9 @@ tspan {
   } 
   .s {
     margin-top: -5px !important;
+  }
+
+  .special {
+    margin-top: 0px !important;
   }
 }
