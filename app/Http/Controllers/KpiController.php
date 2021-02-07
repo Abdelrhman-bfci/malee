@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class KpiController extends Controller
 {
 
-    public function index(Request $request , $player_id){
+      public function index(Request $request , $player_id){
 
         $player = Player::where('PK_Player', $player_id)->first();
         if ($player){
@@ -47,6 +47,9 @@ class KpiController extends Controller
 
                 $count = $player->items()->whereIn('Item.PK_Item',[19,20])->count();
                 ($count>0)? $kpi21 = 1: $kpi21 = 0;
+
+                $count = $player->items()->whereIn('Item.PK_Item', [17,18,19, 20])->count();
+                ($count > 0) ? $kpi22 = 1 : $kpi22 = 0;
 
                 $kpi4 = array_sum($totalNeedItems)? (array_sum($totalWantItems)/ array_sum($totalNeedItems))*100 : 0;
 
@@ -87,6 +90,7 @@ class KpiController extends Controller
                             'kpi17' =>$kpi17,
                             'kpi18' =>$kpi18,
                             'kpi21' =>$kpi21,
+                            'kpi22' =>$kpi22,
                         ]);
                 }else{
                     $playerKPi =  PlayerKpis::create(
@@ -101,6 +105,7 @@ class KpiController extends Controller
                             'kpi17' =>$kpi17,
                             'kpi18' =>$kpi18,
                             'kpi21' =>$kpi21,
+                            'kpi22' =>$kpi22,
                         ]);
                 }
 
@@ -110,47 +115,47 @@ class KpiController extends Controller
 
     }
 
-    public function statistics(Request $request){
+      public function statistics(Request $request){
         PlayerKpis::Resolve();
 
         $total = PlayerKpis::count();
-        $state1 = PlayerKpis::where('kpi1', 1)->count();
-        $state2 = PlayerKpis::where('kpi3', 1)->count();
-        $state3 = 0; //PlayerKpis::where('kpi3', 1)->count();
-        $state4 = PlayerKpis::where('kpi5', 1)->count();
-        $state5 = 0; //PlayerKpis::where('kpi3', 1)->count();
+        $state1 = PlayerKpis::sum('kpi13') / $total;
+        $state2 = PlayerKpis::where('kpi1', 1)->count();
+        $state3 = PlayerKpis::where('kpi3', 1)->count();
+        $state4 =  PlayerKpis::sum('kpi4') / $total;
+        $state5 = PlayerKpis::where('kpi5', 1)->count();
         $state6 = PlayerKpis::where('kpi9', 1)->count();
-        $state7 = 0 ;//PlayerKpis::where('kpi9', 1)->count();
-        $state8 = 0 ; //PlayerKpis::where('kpi9', 1)->count();
-        $state9 = PlayerKpis::where('kpi18', 1)->count();
+        $state7 = PlayerKpis::sum('kpi17') / $total;
+        $state8 = PlayerKpis::where('kpi18', 1)->count();
+        $state9 = PlayerKpis::where('kpi22', 1)->count();
         $state10 = PlayerKpis::where('kpi21', 1)->count();
 
         $statistics = (object)[
-            'state1' => $state1,
-            'state2' => $state2,
-            'state3' => $state3,
-            'state4' => $state4,
-            'state5' => $state5,
-            'state6' => $state6,
-            'state7' => $state7,
-            'state8' => $state8,
-            'state9' => $state9,
-            'state10' => $state10,
-        ];
+                                'state1' => $state1,
+                                'state2' => $state2,
+                                'state3' => $state3,
+                                'state4' => $state4,
+                                'state5' => $state5,
+                                'state6' => $state6,
+                                'state7' => $state7,
+                                'state8' => $state8,
+                                'state9' => $state9,
+                                'state10' => $state10,
+                              ];
 
         // dd($statistics);
-        return view('statistics' , compact('statistics','total'));
+         return view('statistics' , compact('statistics','total'));
 
     }
 
 
-    public function Restpassword(Request $request){
+      public function getToken(Request $request){
         dd($request->token);
-    }
+      }
 
-    public function resetPassword(Request $request)
-    {
+      public function resetPassword(Request $request)
+      {
         $token = $request->token;
         return view('reset-password', compact('token'));
-    }
+      }
 }

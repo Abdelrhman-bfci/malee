@@ -10,12 +10,11 @@ class PlayerKpis extends Model
     protected $table = 'player_kpis';
     protected $guarded = [];
 
-    public function player()
-    {
-        return $this->belongsTo(Player::class, 'FK_player_id', 'id');
+    public function player(){
+        return $this->belongsTo(Player::class , 'FK_player_id','id');
     }
 
-    public static function Resolve()
+     public static function Resolve()
     {
         if (Player::count() != PlayerKpis::count()) {
             $players = Player::get();
@@ -56,6 +55,9 @@ class PlayerKpis extends Model
                         $count = $player->items()->whereIn('Item.PK_Item', [19, 20])->count();
                         ($count > 0) ? $kpi21 = 1 : $kpi21 = 0;
 
+                        $count = $player->items()->whereIn('Item.PK_Item', [17,18,19, 20])->count();
+                        ($count > 0) ? $kpi22 = 1 : $kpi22 = 0;
+
                         $kpi4 = array_sum($totalNeedItems) ? (array_sum($totalWantItems) / array_sum($totalNeedItems)) * 100 : 0;
 
                         ////
@@ -95,6 +97,7 @@ class PlayerKpis extends Model
                                     'kpi17' => $kpi17,
                                     'kpi18' => $kpi18,
                                     'kpi21' => $kpi21,
+                                    'kpi22' => $kpi22,
                                 ]);
                         } else {
                             $playerKPi = PlayerKpis::create(
@@ -109,10 +112,11 @@ class PlayerKpis extends Model
                                     'kpi17' => $kpi17,
                                     'kpi18' => $kpi18,
                                     'kpi21' => $kpi21,
+                                    'kpi22' => $kpi22,
                                 ]);
                         }
 
-//                        return response($playerKPi);
+                        // return response($playerKPi);
                     }
                 }
             }

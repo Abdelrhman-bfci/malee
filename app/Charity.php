@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Charity extends Model
 {
     public $timestamps = false;
-    protected $table = 'charity';
+    protected $table = 'Charity';
     protected $guarded = [];
 }
