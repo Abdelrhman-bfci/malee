@@ -233,6 +233,9 @@ tspan {
   .col-12 .font-weight-bold.mt-4 {
     margin-top: 40px !important;
   }
+  .special {
+    margin-top: 10px !important;
+  }
 }
 
 @media (min-width: 1200px) { 

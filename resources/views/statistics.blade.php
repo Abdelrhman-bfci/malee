@@ -41,7 +41,7 @@
                 <div class="col-md-4 mb-4"></div>
                 <div class="col-md-4 mb-4">
                     <div class="circle text-center d-flex align-items-center justify-content-center">
-                        <h1>{{$statistics->state1}}</h1>
+                        <h1>{{$statistics->state1}}%</h1>
                     </div>
                     <div class="wrapper mt-5">
                         <div class="text-center mt-4 ">
@@ -102,12 +102,12 @@
                         <div class="text-content px-3 d-flex justify-content-center ">
                             <div class="right d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
-                                <div class="muted small mx-2">{{$statistics->state2}}</div>
+                                <div class="muted small mx-2">{{$statistics->state3}}</div>
                                 <div class="muted small">قادر</div>
                             </div>
                             <div class="left mr-4 d-flex justify-content-center align-items-center">
                                 <div class="lose mx-2"></div>
-                                <div class="muted small mx-2">{{($total - $statistics->state2)}}</div>
+                                <div class="muted small mx-2">{{($total - $statistics->state3)}}</div>
                                 <div class="muted small">غير قادر</div>
                             </div>
                         </div>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="col-md-4 mb-4" style="position: relative;">
                     <div class="circle text-center d-flex align-items-center justify-content-center">
-                        <h1>{{$statistics->state4}}</h1>
+                        <h1>{{$statistics->state4}}%</h1>
                     </div>
                     <div class="wrapper mt-5">
                         <div class="text-content  px-3 d-flex justify-content-center ">
@@ -281,7 +281,7 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-4 mb-2" style="position: relative;">
                     <div class="circle text-center d-flex align-items-center justify-content-center">
-                        <h1>{{$statistics->state7}}</h1>
+                        <h1>{{$statistics->state7}}%</h1>
                     </div>
                     <div class="wrapper special">
                         <div class="text-content px-3 d-flex justify-content-center ">
@@ -318,12 +318,12 @@
                         <div class="text-content  px-3 d-flex justify-content-center " style="margin-top: -20px !important; margin-bottom: 60px !important;">
                             <div class="right d-flex justify-content-center align-items-center ">
                                 <div class="win"></div>
-                                <div class="muted small mx-2">{{$statistics->state9}}</div>
+                                <div class="muted small mx-2">{{$statistics->state8}}</div>
                                 <div class="muted small" style="font-size: 9px !important; width: 90px; margin-top: 22px !important;">تمكنوا من العطاء مع الاتزام بالادخار والإنفاق الرشيد</div>
                             </div>
                             <div class="left d-flex justify-content-center align-items-center">
                                 <div class="lose mx-2"></div>
-                                <div class="muted small mx-2">{{$total - $statistics->state9}}</div>
+                                <div class="muted small mx-2">{{$total - $statistics->state8}}</div>
                                 <div class="muted small" style="font-size: 9px !important;  width: 90px; margin-top: 22px !important;">قامو بالعطاء مع بعض القصور فى مسارات الصرف الأخرى</div>
                             </div>
                         </div>
@@ -361,7 +361,7 @@
                         <div class="text-content  px-3 d-flex justify-content-center ">
                             <div class="right  d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
-                                <div class="muted small mx-2">443</div>
+                                <div class="muted small mx-2">{{$statistics->state9}}</div>
                                 <div class="muted small" style="font-size: 9px !important; width: 90px;"> مشروع تجاري</div>
                             </div>
                             {{-- <div class="left  d-flex justify-content-center align-items-center ">
@@ -400,7 +400,7 @@
                             </div> --}}
                             <div class="left  d-flex justify-content-center align-items-center ">
                                 <div class="lose mx-2"></div>
-                                <div class="muted small mx-2">300</div>
+                                <div class="muted small mx-2">{{$statistics->state10}}</div>
                                 <div class="muted small" style="font-size: 9px !important; width: 90px;"> بالاستثمار الأمثل</div>
                             </div>
                         </div>
