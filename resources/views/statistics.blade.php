@@ -178,7 +178,7 @@
                             </div>
                             <div class="left mr-4 d-flex justify-content-center align-items-center ">
                                 <div class="lose mx-2"></div>
-                                <div class="muted mx-2">{{($total - $statistics->state5)}}</div>
+                                <div class="muted small mx-2">{{($total - $statistics->state5)}}</div>
                                 <div class="muted small">غير قادر</div>
                             </div>
                         </div>
