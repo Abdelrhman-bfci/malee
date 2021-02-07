@@ -119,13 +119,13 @@ class KpiController extends Controller
         PlayerKpis::Resolve();
 
         $total = PlayerKpis::count();
-        $state1 = PlayerKpis::sum('kpi13') / $total;
+        $state1 = round( PlayerKpis::sum('kpi13') / $total);
         $state2 = PlayerKpis::where('kpi1', 1)->count();
         $state3 = PlayerKpis::where('kpi3', 1)->count();
-        $state4 =  PlayerKpis::sum('kpi4') / $total;
+        $state4 = round( PlayerKpis::sum('kpi4') / $total);
         $state5 = PlayerKpis::where('kpi5', 1)->count();
         $state6 = PlayerKpis::where('kpi9', 1)->count();
-        $state7 = PlayerKpis::sum('kpi17') / $total;
+        $state7 =round( PlayerKpis::sum('kpi17') / $total);
         $state8 = PlayerKpis::where('kpi18', 1)->count();
         $state9 = PlayerKpis::where('kpi22', 1)->count();
         $state10 = PlayerKpis::where('kpi21', 1)->count();
