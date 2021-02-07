@@ -171,16 +171,16 @@
                     </div>
                     <div class="wrapper mt-md-5">
                         <div class="text-content  px-3 d-flex justify-content-center ">
-                            {{-- <div class="right d-flex justify-content-center align-items-center ">
+                            <div class="right d-flex justify-content-center align-items-center ">
                                 <div class="win"></div>
-                                <div class="muted small mx-2">{{$statistics->state4}}</div>
+                                <div class="muted small mx-2">{{$statistics->state5}}</div>
                                 <div class="muted  small">قادر</div>
                             </div>
                             <div class="left mr-4 d-flex justify-content-center align-items-center ">
                                 <div class="lose mx-2"></div>
-                                <div class="muted mx-2">{{($total - $statistics->state4)}}</div>
+                                <div class="muted mx-2">{{($total - $statistics->state5)}}</div>
                                 <div class="muted small">غير قادر</div>
-                            </div> --}}
+                            </div>
                         </div>
                         <div class="text-center my-3 ">
                             <div class="muted small text-center txt">من اللاعبين قاموا بتوزيع الدخل على مسارات صرف المال</div>
