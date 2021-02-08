@@ -473,9 +473,27 @@
 
             @media(max-width: 500px ) {
                 .row-hover {
-                background-color: #eee;
-                border-radius: 50px ;
-            }
+                    background-color: #eee;
+                    border-radius: 50px ;
+                }
+
+                .gameInfo p{
+                    color: #9c9c9c;
+                    font-size: 10px;
+                }
+
+                .gameInfo h6 {
+                    color: rgb(124, 124, 124);
+                    font-size: 16px;
+                }
+
+                .gameInfo img {
+                    width: 30px;
+                }
+
+                .gameInfo .ios img {
+                    width: 25px;
+                }
             }
 
             @media(min-width: 1950px )
