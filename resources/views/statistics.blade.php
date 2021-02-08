@@ -438,17 +438,17 @@
             <div class="google mb-4">
                 <h6 class="mb-3 d-inline-block">Google Play</h6>
                 <span><img src="images/play-store.png" alt=""></span>
-                {{$android}}
+                {{$statistics->android}}
                 <p>عدد التحميلات 10+</p>
                 <p>تاريخ التحديث 2020, 8 December</p>
                 <p>عدد المقيمين .</p>
             </div>
             <div class="ios mt-5">
-                {{$ios}}
+                {{-- {!!$statistics->ios!!} --}}
                 <h6 class="mb-3 d-inline-block">App Store</h6>
                 <span class="mr-2"><img src="images/app-store.png" alt=""></span>
-                <p>عدد التحميلات 100</p>
-                <p>التقييم 4+</p>
+                <p>عدد التحميلات <span>{{$iOS->data->downloads}}</span></p>
+                <p> التقييم عدد التحميلات <span>{{$iOS->data->score}}</span></p>
             </div>
         </div>
 
