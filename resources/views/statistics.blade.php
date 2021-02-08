@@ -438,7 +438,7 @@
             <div class="google mb-4">
                 <h6 class="mb-3 d-inline-block">Google Play</h6>
                 <span><img src="images/play-store.png" alt=""></span>
-                {{$statistics->android}}
+{{--                {{$android}}--}}
                 <p>عدد التحميلات 10+</p>
                 <p>تاريخ التحديث 2020, 8 December</p>
                 <p>عدد المقيمين .</p>
