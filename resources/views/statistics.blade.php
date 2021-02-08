@@ -196,7 +196,7 @@
                     </div>
                 </div>
                 <div class="col-md-2"></div>
-               
+
                 <div class="col-md-4 mb-4" style="position: relative;">
                     <div class="progress6 circle-progress-value text-center" style="width: auto; height: auto; background-color: inherit;">
                         <h3></h3>
@@ -438,11 +438,13 @@
             <div class="google mb-4">
                 <h6 class="mb-3 d-inline-block">Google Play</h6>
                 <span><img src="images/play-store.png" alt=""></span>
+                {{$android}}
                 <p>عدد التحميلات 10+</p>
                 <p>تاريخ التحديث 2020, 8 December</p>
                 <p>عدد المقيمين .</p>
             </div>
             <div class="ios mt-5">
+                {{$ios}}
                 <h6 class="mb-3 d-inline-block">App Store</h6>
                 <span class="mr-2"><img src="images/app-store.png" alt=""></span>
                 <p>عدد التحميلات 100</p>
