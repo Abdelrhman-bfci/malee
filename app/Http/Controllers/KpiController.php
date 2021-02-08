@@ -133,7 +133,7 @@ class KpiController extends Controller
         $state10 = PlayerKpis::where('kpi21', 1)->count();
 
         $scraper = new \App\Scraper();
-        $android = $scraper->getApp('com.MeemEein.MalyMultiplayer');
+        $android = (object)$scraper->getApp('com.MeemEein.MalyMultiplayer');
         $json = file_get_contents("https://appmagic.rocks/api/v1/applications/2/1530905389");
         $iOS = json_decode($json);
 
