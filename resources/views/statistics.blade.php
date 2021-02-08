@@ -420,6 +420,81 @@
             </div>
         </div>
 
+
+        <div class="col-12 subHeader text-center my-md-5">
+            <div class="title">
+                <h4>معلومات عن اللعبة</h4>
+            </div>
+        </div>
+
+
+         <!------------------------------------------------------------- Android & IOS ---------------------------------------------------------------->
+         <div class="col-12 mb-5">
+            <div class="separator"></div>
+        </div>
+
+        <div class="gameInfo text-right pr-4 mb-4 pr-md-5">
+            {{-- <h5 class="mb-5" style="color: #3E7A56;">معلومات عن اللعبة:</h5> --}}
+            <div class="google mb-4">
+                <h6 class="mb-3 d-inline-block">Google Play</h6>
+                <span><img src="images/play-store.png" alt=""></span>
+                <p>عدد التحميلات 10+</p>
+                <p>تاريخ التحديث 2020, 8 December</p>
+                <p>عدد المقيمين .</p>
+            </div>
+            <div class="ios mt-5">
+                <h6 class="mb-3 d-inline-block">App Store</h6>
+                <span class="mr-2"><img src="images/app-store.png" alt=""></span>
+                <p>عدد التحميلات 100</p>
+                <p>التقييم 4+</p>
+            </div>
+        </div>
+
+        <style>
+            .gameInfo h6 {
+                color: rgb(124, 124, 124);
+                font-size: 25px;
+            }
+            .gameInfo p{
+                color: #9c9c9c;
+            }
+            .gameInfo img {
+                width: 50px;
+            }
+
+            .gameInfo .ios img {
+                width: 40px;
+            }
+
+            .row-hover {
+                background-color: #eee;
+                border-radius: 90px ;
+            }
+
+            @media(max-width: 500px ) {
+                .row-hover {
+                background-color: #eee;
+                border-radius: 50px ;
+            }
+            }
+
+            @media(min-width: 1950px )
+            {
+                .chart-content {
+                    max-width: 150px;
+                    text-align: center;
+                    position: absolute;
+                    top: 0%;
+                    left: 35%;
+                    display: flex;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    right: 35%;
+                    transform: translate(-30px, -150px);
+                }
+            }
+        </style>
     </div>
 </div>
 <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
