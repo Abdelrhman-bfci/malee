@@ -149,8 +149,6 @@ class KpiController extends Controller
             'state9' => $state9,
             'state10' => $state10,
         ];
-
-        // dd($statistics);
         return view('statistics', compact('statistics', 'total','iOS','android'));
 
     }
