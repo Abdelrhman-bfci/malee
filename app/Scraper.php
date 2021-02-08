@@ -3,6 +3,7 @@
 namespace App;
 
 use GuzzleHttp\ClientInterface as GuzzleClientInterface;
+use http\Client;
 use Symfony\Component\DomCrawler\Crawler;
 use App\Exception\RequestException;
 use App\Exception\NotFoundException;
