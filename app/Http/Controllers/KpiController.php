@@ -133,8 +133,9 @@ class KpiController extends Controller
         $state10 = PlayerKpis::where('kpi21', 1)->count();
 
         $scraper = new \App\Scraper();
-        $android = $scraper->getApp('com.MeemEein.Maly');
-        $json = file_get_contents("https://appmagic.rocks/api/v1/applications/3/1530905389");
+        // $android = $scraper->getApp('com.MeemEein.Maly');
+        $android = null;
+        $json = file_get_contents("https://appmagic.rocks/api/v1/applications/2/1530905389");
         $iOS = json_decode($json);
 
         $statistics = (object)[
@@ -153,7 +154,7 @@ class KpiController extends Controller
         ];
 
         // dd($statistics);
-        return view('statistics', compact('statistics', 'total'));
+        return view('statistics', compact('statistics', 'total','iOS'));
 
     }
 
