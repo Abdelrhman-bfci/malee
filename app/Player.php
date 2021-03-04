@@ -12,12 +12,12 @@ class Player extends Model
 
     public function charities(){
         return $this->belongsToMany(Charity::class , 'Player_Charity', 'FK_Player','FK_Charity','PK_Player','PK_Charity')
-            ->withPivot('MoneyBefore');
+            ->withPivot('MoneyBefore','WalletBefore');
     }
 
     public function items(){
         return $this->belongsToMany(Item::class , 'Player_Item', 'FK_Player','FK_Item','PK_Player','PK_Item')
-            ->withPivot('MoneyBefore','ItemDisplayedPrice','PriceMultiplier','FK_CellIndex');
+            ->withPivot('MoneyBefore','ItemDisplayedPrice','WalletBefore','PriceMultiplier','FK_CellIndex');
     }
     
     public function plans(){

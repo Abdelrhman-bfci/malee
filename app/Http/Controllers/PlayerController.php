@@ -45,12 +45,14 @@ class PlayerController extends Controller
                 $item = (object) $item;
                 $CellIndex = Cell::where('Name',$item->buyingCellIndex)->first();
                 $MoneyBefore = $item->moneyBefore;
+                 $WalletBefore = $item->WalletBefore;
                 foreach ($item->itemsBought  as $innerItem ){
                     $innerItem = (object) $innerItem;
                    $subItem = Item::where('Name', $innerItem->itemName)->first();
                     $items[$subItem->PK_Item] = [
                         'FK_Player' => $player->id,
                         'MoneyBefore' => $MoneyBefore,
+                         'WalletBefore' => $WalletBefore,
                         'ItemDisplayedPrice' => $innerItem->itemDisplayedPrice,
                         'PriceMultiplier' => $innerItem->priceMultiplier,
                         'FK_CellIndex' => $CellIndex->PK_Cell,
@@ -69,6 +71,7 @@ class PlayerController extends Controller
                 $charities[$innCharity->PK_Charity] = [
                      'FK_Player' => $player->id,
                     'MoneyBefore' => $charity->moneyBefore,
+                    'WalletBefore' => $charity->WalletBefore,
                     'FK_CellIndex' => $CellIndex->PK_Cell,
                 ];
             }
