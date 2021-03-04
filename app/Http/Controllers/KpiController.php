@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Player;
 use App\PlayerKpis;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Nowakowskir\JWT\JWT;
+use Nowakowskir\JWT\TokenDecoded;
+use Ramsey\Uuid\Type\Time;
 
 class KpiController extends Controller
 {
@@ -118,6 +122,14 @@ class KpiController extends Controller
 
     public function statistics(Request $request)
     {
+
+        $private =  file_get_contents(public_path('/AuthKey_4HY7NBQYP6.p8')) ;
+//        $private = 'MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQg9xaAONLdMXdu8Nhr/KaRS/irxVQdpPZBC9piCOM3LtmgCgYIKoZIzj0DAQehRANCAAQpYFol3l+1YBG6NM2I67Hb0AzrNGXa4IGzBowPtylkbMez2BGO4rLdzuzH4KWTV05xbypuwzSY5+DleewsPN1Y';
+        $tokenDecoded = new TokenDecoded(['iss' => '5e2e4e8e-c3ad-4717-b0e9-80ff680c5a09', 'exp' => \time()+ 20 * 60, 'aud' => 'appstoreconnect-v1'], [
+            'kid' => '4HY7NBQYP6']);
+        $tokenEncoded = $tokenDecoded->encode($private, JWT::ALGORITHM_HS256);
+        return  $tokenEncoded->toString();
+        echo 'Your token is: ' . $tokenEncoded->toString();
         PlayerKpis::Resolve();
 
         $total = PlayerKpis::count();
@@ -150,7 +162,7 @@ class KpiController extends Controller
             'state10' => $state10,
         ];
 
-        return view('statistics', compact('statistics', 'total','iOS','android'));
+        return view('statistics', compact('statistics', 'total', 'iOS', 'android'));
 
     }
 
