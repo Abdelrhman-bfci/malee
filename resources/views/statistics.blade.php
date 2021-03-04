@@ -446,9 +446,9 @@
                 {{-- {!!$statistics->ios!!} --}}
                 <h6 class="mb-3 d-inline-block">App Store</h6>
                 <span class="mr-2"><img src="images/app-store.png" alt=""></span>
-                <p>عدد التحميلات <span>{{$iOS->data->downloads}}</span></p>
-                <p>تاريخ التحديث <span>{{$iOS->data->applicationInfo->release_date}}</span></p>
-                <p> متوسط التقييم <span>{{$iOS->data->applicationInfo->content_rating}}</span></p>
+                <p>عدد التحميلات <span>{{$iOS->results[0]->userRatingCountForCurrentVersion}}</span></p>
+                <p>تاريخ التحديث <span>{{date('d-M-Y', strtotime($iOS->results[0]->currentVersionReleaseDate))}}</span></p>
+                <p> متوسط التقييم <span>{{ $iOS->results[0]->averageUserRatingForCurrentVersion}}</span></p>
             </div>
         </div>
 
