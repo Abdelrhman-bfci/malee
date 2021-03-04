@@ -129,7 +129,7 @@
                     </div>
                     <div class="wrapper mt-5">
                         <div class="text-content  px-3 d-flex justify-content-center ">
-                            <div class="right d-flex justify-content-center align-items-center">
+                            {{-- <div class="right d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
                                 <div class="muted small mx-2">{{$statistics->state4}}</div>
                                 <div class="muted small"></div>
@@ -138,7 +138,7 @@
                                 <div class="lose mx-2"></div>
                                 <div class="muted small mx-2">{{($total -$statistics->state4 )}}</div>
                                 <div class="muted small"></div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="d-flex justify-content-center my-3">
                             <div class="muted small txt" style="height: 23px;"></div>
@@ -359,14 +359,14 @@
                             <div class="muted small">نسبة اللاعبين الذين قاموا بالاستثمار (مشروع تجاري)</div>
                         </div>
                         <div class="text-content  px-3 d-flex justify-content-center ">
-                            <div class="right  d-flex justify-content-center align-items-center">
+                            {{-- <div class="right  d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
                                 <div class="muted small mx-2">{{$statistics->state9}}</div>
                                 <div class="muted small" style="font-size: 9px !important; width: 90px;"> مشروع تجاري</div>
                             </div>
-                            {{-- <div class="left  d-flex justify-content-center align-items-center ">
+                            <div class="left  d-flex justify-content-center align-items-center ">
                                 <div class="lose mx-2"></div>
-                                <div class="muted small mx-2">{{$total - $statistics->state10}}</div>
+                                <div class="muted small mx-2">{{$total - $statistics->state9}}</div>
                                 <div class="muted small" style="font-size: 9px !important; width: 90px;">قامو بالاستثمار الامثل</div>
                             </div> --}}
                         </div>
@@ -398,11 +398,11 @@
                                 <div class="muted small mx-2">{{$statistics->state10}}</div>
                                 <div class="muted small" style="font-size: 9px !important; width: 90px;">بتأسيس مشروع تجاري</div>
                             </div> --}}
-                            <div class="left  d-flex justify-content-center align-items-center ">
+                            {{-- <div class="left  d-flex justify-content-center align-items-center ">
                                 <div class="lose mx-2"></div>
                                 <div class="muted small mx-2">{{$statistics->state10}}</div>
                                 <div class="muted small" style="font-size: 9px !important; width: 90px;"> بالاستثمار الأمثل</div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="d-flex justify-content-center my-3">
                             <div class="muted small"></div>
