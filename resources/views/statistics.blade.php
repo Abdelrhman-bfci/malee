@@ -73,12 +73,12 @@
                         <div class="text-content  px-3 d-flex justify-content-center ">
                             <div class="right mx-4 d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
-                                <div class="muted small mx-2">{{$statistics->state1}}</div>
+                                <div class="muted small mx-2">{{$statistics->state2}}</div>
                                 <div class="muted small">قادر</div>
                             </div>
                             <div class="left d-flex justify-content-center align-items-center">
                                 <div class="lose mx-2"></div>
-                                <div class="muted small mx-2">{{($total - $statistics->state1) }}</div>
+                                <div class="muted small mx-2">{{($total - $statistics->state2) }}</div>
                                 <div class="muted small">غير قادر</div>
                             </div>
                         </div>
@@ -131,12 +131,12 @@
                         <div class="text-content  px-3 d-flex justify-content-center ">
                             <div class="right d-flex justify-content-center align-items-center">
                                 <div class="win"></div>
-                                <div class="muted small mx-2">{{$statistics->state3}}</div>
+                                <div class="muted small mx-2">{{$statistics->state4}}</div>
                                 <div class="muted small"></div>
                             </div>
                             <div class="left mr-4 d-flex justify-content-center align-items-center">
                                 <div class="lose mx-2"></div>
-                                <div class="muted small mx-2">{{($total -$statistics->state3 )}}</div>
+                                <div class="muted small mx-2">{{($total -$statistics->state4 )}}</div>
                                 <div class="muted small"></div>
                             </div>
                         </div>
