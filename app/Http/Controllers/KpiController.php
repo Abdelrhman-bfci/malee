@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\GamePlayer;
 use App\Player;
 use App\PlayerKpis;
 use Illuminate\Http\Request;
@@ -12,7 +13,7 @@ class KpiController extends Controller
     public function index(Request $request, $player_id)
     {
 
-        $player = Player::where('PK_Player', $player_id)->first();
+        $player = GamePlayer::where('PK_Player', $player_id)->first();
         if ($player) {
             if ($player->items) {
 

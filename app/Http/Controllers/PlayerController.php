@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Cell;
 use App\Charity;
+use App\GamePlayer;
 use App\Item;
 use App\Player;
 
@@ -12,13 +13,13 @@ use Illuminate\Http\Request;
 class PlayerController extends Controller
 {
     //
-    
+
       public function index(Request $request){
-       $players = Player::orderBy('PK_Player','DESC')->limit(30)
+       $players = GamePlayer::orderBy('PK_Player','DESC')->limit(30)
            ->get()->transform(function ($player){
                $player->items;
                $player->charities;
-               $player->kpis; 
+               $player->kpis;
                $player->plans;
                return [
                    'player' => $player,
@@ -27,18 +28,18 @@ class PlayerController extends Controller
                 //   'kpi' => $player->kpis,
                ];
            });
-       
+
          return response($players);
     }
 
     public function save(Request $request)
     {
-        
+
         //  return response(['player' => $request->PlannedItems]);
-        $player = new Player();
+        $player = new GamePlayer();
         $player->fill($request->except('items', 'charities','PlannedItems'));
         $player->save();
-       
+
         if ($request->has('items') && $player) {
             $items = [];
             foreach ($request->items as  $item) {
@@ -60,7 +61,7 @@ class PlayerController extends Controller
                 }
             }
             $player->items()->sync($items);
-            
+
         }
         if ($request->has('charities')) {
             $charities = [];
@@ -77,7 +78,7 @@ class PlayerController extends Controller
             }
             $player->charities()->sync($charities);
         }
-        
+
          if ($request->has('PlannedItems')) {
             $plans = [];
             foreach ($request->PlannedItems as $plan) {
