@@ -154,6 +154,10 @@ class KpiController extends Controller
 
     }
 
+    public function dashboard(Request $request)
+    {
+        return view('dashboard');
+    }
 
     public function getToken(Request $request)
     {

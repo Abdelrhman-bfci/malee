@@ -34,6 +34,6 @@ Route::get('/', function () {
 Route::get('/playerKpis/{player_id}' , 'KpiController@index');
 
 Route::get('/malee' , 'KpiController@statistics');
-
+Route::get('/malee_detailed' , 'KpiController@dashboard');
 Route::get('/reset-password' , 'KpiController@resetPassword');
 
